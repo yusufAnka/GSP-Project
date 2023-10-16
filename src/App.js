@@ -1,26 +1,24 @@
+// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LandingPage from './components/LandingPage';
-import DataComponent from './components/DataComponent';
-import ErrorComponent from './components/ErrorComponent';
-import styled from 'styled-components';
-
-const AppContainer = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-`;
+import GlobalStyles from './styles/GlobalStyles';
+import Navbar from './components/LandingPage/Navbar';
+import Introduction from './components/LandingPage/Introduction';
+import ApiData from './components/ApiData/ApiData';
+import Users from './components/Users/User'; 
+import Comments from './components/Comments/Comment';
 
 const App = () => {
   return (
     <Router>
-      <AppContainer>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/data" element={<DataComponent resource="posts" />} />
-          <Route path="/error" element={<ErrorComponent />} />
-        </Routes>
-      </AppContainer>
+      <GlobalStyles />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Introduction />} />
+        <Route path="/api-data" element={<ApiData />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/comments" element={<Comments />} /> {/* Add this line for the new route */}
+      </Routes>
     </Router>
   );
 };
