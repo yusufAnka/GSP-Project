@@ -1,8 +1,8 @@
 // src/components/ApiData/ApiData.js
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { fetchPosts } from '../../utils/api';
 import Table from '../Table';
+import { fetchPosts } from '../../utils/api';
 
 const DataContainer = styled.div`
   padding: 2rem;
@@ -22,7 +22,7 @@ const ApiData = () => {
   return (
     <DataContainer>
       <h2>Posts from JSONPlaceholder API</h2>
-      <Table headings={tableHeadings} data={posts} />
+      <Table headings={tableHeadings} data={posts} itemsPerPage={20} />
     </DataContainer>
   );
 };

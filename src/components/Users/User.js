@@ -1,8 +1,8 @@
 // src/components/Users/Users.js
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { fetchUsers } from '../../utils/api';
 import Table from '../Table';
+import { fetchUsers } from '../../utils/api';
 
 const UsersContainer = styled.div`
   padding: 2rem;
@@ -22,7 +22,7 @@ const Users = () => {
   return (
     <UsersContainer>
       <h2>Users from JSONPlaceholder API</h2>
-      <Table headings={tableHeadings} data={users} />
+      <Table headings={tableHeadings} data={users} itemsPerPage={20} />
     </UsersContainer>
   );
 };
