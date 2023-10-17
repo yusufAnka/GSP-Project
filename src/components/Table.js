@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const StyledTable = styled.table`
-  width: 100%;
+  width: 100%; /* Set a fixed width or adjust as needed */
+  margin: 0 auto; /* Center the table */
   border-collapse: collapse;
   margin-top: 1rem;
 `;
@@ -11,20 +12,23 @@ const TableHead = styled.th`
   background-color: #333;
   color: white;
   padding: 0.5rem;
+  text-align: left; /* Center align the text */
 `;
 
 const TableData = styled.td`
   padding: 0.5rem;
+  text-align: left /* Center align the text */
 `;
 
 const TableRow = styled.tr`
-  background-color: ${(props) => (props.isOdd ? '#f2f2f2' : '#e6e6e6')};
+  background-color: ${(props) => (props.$isodd ? '#f2f2f2' : '#e6e6e6')};
 `;
 
 const PaginationContainer = styled.div`
   margin-top: 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Center align items */
 `;
 
 const PaginationButton = styled.button`
@@ -69,7 +73,7 @@ const Table = ({ headings, data, itemsPerPage }) => {
         </thead>
         <tbody>
           {currentItems.map((item, index) => (
-            <TableRow key={item.id} isOdd={index % 2 !== 0}>
+            <TableRow key={item.id} $isodd={index % 2 !== 0}>
               {headings.map((heading) => (
                 <TableData key={heading}>{item[heading.toLowerCase()]}</TableData>
               ))}
@@ -87,7 +91,6 @@ const Table = ({ headings, data, itemsPerPage }) => {
           Next
         </PaginationButton>
       </PaginationContainer>
-      {/* pagination */}
     </div>
   );
 };

@@ -10,7 +10,7 @@ import {
   Title,
   OpenLinksButton,
   NavbarLinkExtended,
-} from "../../styles/Navbar.style";
+} from "../styles/Navbar.style";
 
 function Navbar() {
   const [extendNavbar, setExtendNavbar] = useState(false);

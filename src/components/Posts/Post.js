@@ -1,28 +1,25 @@
-import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Table from '../Table';
 import Loader from '../Loader'; 
-import { fetchPosts } from '../../utils/api';
+import { POSTS } from '../../utils/constants';
+import useFetch from '../../hooks/useFetch';
 
 const DataContainer = styled.div`
   padding: 2rem;
 `;
 
-const Posts = () => {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
+const ErrorMessage = styled.p`
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* Change the font family as needed */
+`;
 
-  useEffect(() => {
-    fetchPosts()
-      .then((response) => {
-        setPosts(response);
-        setLoading(false); // I have Set loading to false once the data is loaded
-      })
-      .catch((error) => {
-        console.error('Error fetching posts:', error);
-        setLoading(false); // I have Set loading to false in case of an error
-      });
-  }, []);
+const Posts = () => {
+  const { loading, error, data: posts } = useFetch(POSTS)
 
   const tableHeadings = ['ID', 'Title', 'Body'];
 
@@ -31,7 +28,9 @@ const Posts = () => {
       <h2>Posts from JSONPlaceholder API</h2>
       {loading ? (
         <Loader /> // I display the Loader component while data is being fetching.....
-      ) : (
+      ) : error ? (
+        <ErrorMessage>{error}</ErrorMessage>
+        ) : (
         <Table headings={tableHeadings} data={posts} itemsPerPage={15} />
       )}
     </DataContainer>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import GlobalStyles from './styles/GlobalStyles';
-import Navbar from './components/LandingPage/Navbar';
-import Introduction from './components/LandingPage/Introduction';
+import Navbar from './components/Navbar';
+import Introduction from './pages/landingPage';
 import Users from './components/Users/User'; 
 import Comments from './components/Comments/Comment';
 import Posts from './components/Posts/Post';
 import Photos from './components/Photos/Photos';
-import Footer from './components/LandingPage/Footer';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
