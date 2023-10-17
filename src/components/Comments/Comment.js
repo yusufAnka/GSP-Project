@@ -17,20 +17,30 @@ const ErrorMessage = styled.p`
   border-radius: 5px;
   padding: 1rem;
   text-align: center;
-  font-family: 'Arial', sans-serif; 
+  font-family: "Arial", sans-serif;
+`;
+
+const Heading = styled.h2`
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
 `;
 
 const Comments = () => {
+  // Fetching comments data using custom hook
   const { loading, error, data: comments } = useFetch(COMMENTS);
 
+  // Table headings
   const tableHeadings = ["ID", "Name", "Email"];
 
   return (
     <CommentsContainer>
-      <h2>Comments from JSONPlaceholder API</h2>
+      <Heading>Comments from JSONPlaceholder API</Heading>
+      {/* Display loader while data is being fetched */}
       {loading ? (
-        <Loader /> // Display the Loader component while data is being fetched
+        <Loader />
       ) : error ? (
+        // for displaying an error message 
         <ErrorMessage>{error}</ErrorMessage>
       ) : (
         <Table headings={tableHeadings} data={comments} itemsPerPage={15} />

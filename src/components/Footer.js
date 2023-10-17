@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
-  background-color: black;;
+  background-color: black;
   color: white;
   padding: 0.8rem;
   text-align: center;
@@ -12,7 +12,9 @@ const FooterContainer = styled.footer`
   max-height: 2rem;
 
   p {
-    max-width: 96vw
+    max-width: 96vw;
+    margin: 0; 
+    font-size: 0.8rem; 
   }
 `;
 

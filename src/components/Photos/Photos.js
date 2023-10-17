@@ -10,15 +10,15 @@ const PhotosContainer = styled.div`
 
 const PhotosGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 1rem; 
 `;
 
 const PhotoCard = styled.div`
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 0.8rem; 
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
 
   img {
     width: 100%;
@@ -40,7 +40,7 @@ const PaginationButton = styled.button`
   background-color: #333;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.4rem;
 `;
 
 const Photos = () => {
@@ -50,15 +50,18 @@ const Photos = () => {
   const itemsPerPage = 24;
 
   useEffect(() => {
-    fetchPhotos()
-      .then((response) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetchPhotos();
         setPhotos(response);
         setLoading(false);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error('Error fetching photos:', error);
         setLoading(false);
-      });
+      }
+    };
+
+    fetchData();
   }, []);
 
   const indexOfLastPhoto = currentPage * itemsPerPage;

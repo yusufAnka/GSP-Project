@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 
+// Keyframe animation for fadeIn
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -58,7 +59,7 @@ const LearnMoreButton = styled(Link)`
   margin-top: 2rem;
   margin-bottom: 1rem;
   cursor: pointer;
-  text-decoration: none; 
+  text-decoration: none;
   transition: background-color 0.3s ease;
 
   &:hover {
@@ -66,16 +67,18 @@ const LearnMoreButton = styled(Link)`
   }
 `;
 
-const Introduction = () => {
+const LandingPage = () => {
   return (
     <IntroContainer>
       <Title>Interview Project: Building a ReactJS Application with API Integration</Title>
       <ContentContainer>
+
         <Block backgroundColor="#fff">
           <Description>
-            In this interview project, you will be tasked with building a simple ReactJS application that connects to a RESTful API to display data from an external service. This project is designed to assess your skills in developing front-end applications, integrating external services, and working with RESTful APIs.
+            This project is a ReactJS application that connects to a RESTful API (JSONPlaceholder) to display data from an external service. It serves as an interview project to assess skills in developing front-end applications, integrating external services, and working with RESTful APIs.
           </Description>
         </Block>
+
         <Block backgroundColor="#f2f2f2">
           <Description>
             Project Requirements:
@@ -101,4 +104,4 @@ const Introduction = () => {
   );
 };
 
-export default Introduction;
+export default LandingPage;

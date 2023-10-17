@@ -9,8 +9,6 @@ This project is a ReactJS application that connects to a RESTful API (JSONPlaceh
 - [Project Structure](#project-structure)
 - [Testing](#testing)
 - [External Packages](#external-packages)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
