@@ -24,7 +24,7 @@ const Comments = () => {
       });
   }, []);
 
-  const tableHeadings = ['ID', 'Name', 'Email'];
+  const tableHeadings = ['ID', 'Comment', 'Email'];
 
   return (
     <CommentsContainer>

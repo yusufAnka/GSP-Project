@@ -75,7 +75,7 @@ const Photos = () => {
 
   return (
     <PhotosContainer>
-      <h2>Photos from Your API</h2>
+      <h2>Photos from JSONPlaceholder API</h2>
       {loading ? (
         <Loader />
       ) : (

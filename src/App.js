@@ -7,6 +7,7 @@ import Users from './components/Users/User';
 import Comments from './components/Comments/Comment';
 import Posts from './components/Posts/Post';
 import Photos from './components/Photos/Photos';
+import Footer from './components/LandingPage/Footer';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/comments" element={<Comments />} /> 
         <Route path="/photos" element={<Photos />} /> 
       </Routes>
+      <Footer />
     </Router>
   );
 };
