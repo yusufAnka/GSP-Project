@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const FooterContainer = styled.footer`
   background-color: black;;
   color: white;
-  padding: 1rem;
+  padding: 0.8rem;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -14,7 +14,7 @@ const FooterContainer = styled.footer`
 const Footer = () => {
   return (
     <FooterContainer>
-      <p>&copy; 2023 GSP Frontend Developer Coding Assessment. All rights reserved.</p>
+      <p>&copy; 2023 GSP Frontend Assessment. All rights reserved.</p>
     </FooterContainer>
   );
 };
