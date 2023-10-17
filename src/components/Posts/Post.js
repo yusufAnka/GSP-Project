@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Table from '../Table';
-import Loader from '../Loader'; // Import the Loader component
+import Loader from '../Loader'; 
 import { fetchPosts } from '../../utils/api';
 
 const DataContainer = styled.div`
@@ -16,11 +16,11 @@ const Posts = () => {
     fetchPosts()
       .then((response) => {
         setPosts(response);
-        setLoading(false); // Set loading to false once data is loaded
+        setLoading(false); // I have Set loading to false once the data is loaded
       })
       .catch((error) => {
         console.error('Error fetching posts:', error);
-        setLoading(false); // Set loading to false in case of an error
+        setLoading(false); // I have Set loading to false in case of an error
       });
   }, []);
 
@@ -30,9 +30,9 @@ const Posts = () => {
     <DataContainer>
       <h2>Posts from JSONPlaceholder API</h2>
       {loading ? (
-        <Loader /> // Display the Loader component while data is being fetched
+        <Loader /> // I display the Loader component while data is being fetching.....
       ) : (
-        <Table headings={tableHeadings} data={posts} itemsPerPage={20} />
+        <Table headings={tableHeadings} data={posts} itemsPerPage={15} />
       )}
     </DataContainer>
   );
