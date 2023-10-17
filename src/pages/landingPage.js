@@ -54,6 +54,7 @@ const LearnMoreButton = styled.button`
   border: none;
   border-radius: 4px;
   margin-top: 2rem;
+  margin-bottom: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
