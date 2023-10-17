@@ -32,7 +32,7 @@ const Comments = () => {
       ) : error ? (
         <ErrorMessage>{error}</ErrorMessage>
       ) : (
-        <Table headings={tableHeadings} data={comments} itemsPerPage={20} />
+        <Table headings={tableHeadings} data={comments} itemsPerPage={15} />
       )}
     </CommentsContainer>
   );

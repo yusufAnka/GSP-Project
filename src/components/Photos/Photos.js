@@ -46,7 +46,7 @@ const Photos = () => {
   const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 24;
+  const itemsPerPage = 16;
 
   useEffect(() => {
     fetchPhotos()

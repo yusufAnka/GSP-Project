@@ -1,19 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Waveform } from '@uiball/loaders'
 
-const StyledLoader = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-`;
-
-const Loader = () => {
+const Loader = ({ isLoading }) => {
   return (
-    <StyledLoader>
-      <p>Loading...</p>
-    </StyledLoader>
-  );
+    <div aria-live="polite" aria-busy={isLoading}>
+      {isLoading && <Waveform />}
+    </div>
+  )
 };
 
 export default Loader;
