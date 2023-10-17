@@ -43,6 +43,13 @@ export const NavbarLink = styled(Link)`
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   margin: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+   background-color: #555;
+  }
 
   @media (max-width: 700px) {
     display: none;
@@ -55,12 +62,28 @@ export const NavbarLinkExtended = styled(Link)`
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   margin: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+   background-color: #555;
+  }
 `;
 
-export const Logo = styled.img`
+export const Title = styled.h1`
   margin: 10px;
-  max-width: 180px;
-  height: auto;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 700px) {
+    font-size: 1rem; /* Adjust font size for screens with a width of 600px or smaller */
+  }
 `;
 
 export const OpenLinksButton = styled.button`

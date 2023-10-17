@@ -60,7 +60,7 @@ import {
   NavbarInnerContainer,
   NavbarLinkContainer,
   NavbarLink,
-  Logo,
+  Title,
   OpenLinksButton,
   NavbarLinkExtended,
 } from "../../styles/Navbar.style";
@@ -74,9 +74,9 @@ function Navbar() {
         <LeftContainer>
           <NavbarLinkContainer>
             <NavbarLink to="/"> Home</NavbarLink>
-            <NavbarLink to="/products"> Products</NavbarLink>
-            <NavbarLink to="/contact"> Contact Us</NavbarLink>
-            <NavbarLink to="/about"> About Us</NavbarLink>
+            <NavbarLink to="/posts"> Posts</NavbarLink>
+            <NavbarLink to="/users"> Users</NavbarLink>
+            <NavbarLink to="/comments"> Comments</NavbarLink>
             <OpenLinksButton
               onClick={() => {
                 setExtendNavbar((curr) => !curr);
@@ -87,15 +87,15 @@ function Navbar() {
           </NavbarLinkContainer>
         </LeftContainer>
         <RightContainer>
-          <Logo><Title>GSP Project</Title></Logo>
+          <Title>GSP Project</Title>
         </RightContainer>
       </NavbarInnerContainer>
       {extendNavbar && (
         <NavbarExtendedContainer>
           <NavbarLinkExtended to="/"> Home</NavbarLinkExtended>
-          <NavbarLinkExtended to="/products"> Products</NavbarLinkExtended>
-          <NavbarLinkExtended to="/contact"> Contact Us</NavbarLinkExtended>
-          <NavbarLinkExtended to="/about"> About Us</NavbarLinkExtended>
+          <NavbarLinkExtended to="/posts"> Posts</NavbarLinkExtended>
+          <NavbarLinkExtended to="/users"> Users</NavbarLinkExtended>
+          <NavbarLinkExtended to="/comments"> Comments</NavbarLinkExtended>
         </NavbarExtendedContainer>
       )}
     </NavbarContainer>

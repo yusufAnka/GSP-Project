@@ -17,5 +17,3 @@ export const fetchComments = async () => {
   const response = await axios.get(`${BASE_URL}/comments`);
   return response.data;
 };
-
-// You can add more functions for other resources as needed
