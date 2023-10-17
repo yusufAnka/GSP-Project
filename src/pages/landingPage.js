@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`
@@ -12,6 +13,7 @@ const fadeIn = keyframes`
 
 const IntroContainer = styled.div`
   padding: 2rem;
+  padding-bottom: 5rem;
   text-align: center;
   background-color: #f8f8f8;
   border-radius: 10px;
@@ -46,7 +48,7 @@ const Description = styled.p`
   margin-bottom: 1.5rem;
 `;
 
-const LearnMoreButton = styled.button`
+const LearnMoreButton = styled(Link)`
   background-color: #333;
   color: white;
   padding: 0.8rem 2rem;
@@ -56,6 +58,7 @@ const LearnMoreButton = styled.button`
   margin-top: 2rem;
   margin-bottom: 1rem;
   cursor: pointer;
+  text-decoration: none; 
   transition: background-color 0.3s ease;
 
   &:hover {
@@ -93,7 +96,7 @@ const Introduction = () => {
           </Description>
         </Block>
       </ContentContainer>
-      <LearnMoreButton>Learn More</LearnMoreButton>
+      <LearnMoreButton to="/">Learn More</LearnMoreButton>
     </IntroContainer>
   );
 };

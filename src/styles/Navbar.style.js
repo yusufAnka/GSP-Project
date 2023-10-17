@@ -80,6 +80,10 @@ export const Title = styled.h1`
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  &:hover {
+    color: #555;
+  }
 
   @media (max-width: 700px) {
     font-size: 1rem; /* Adjust font size for screens with a width of 600px or smaller */

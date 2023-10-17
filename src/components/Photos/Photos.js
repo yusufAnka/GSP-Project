@@ -5,6 +5,7 @@ import { fetchPhotos } from '../../utils/api';
 
 const PhotosContainer = styled.div`
   padding: 2rem;
+  margin-bottom: 6rem;
 `;
 
 const PhotosGrid = styled.div`
@@ -46,7 +47,7 @@ const Photos = () => {
   const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 16;
+  const itemsPerPage = 24;
 
   useEffect(() => {
     fetchPhotos()

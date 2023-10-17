@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   NavbarContainer,
   LeftContainer,
@@ -19,7 +20,12 @@ function Navbar() {
     <NavbarContainer extendNavbar={extendNavbar}>
       <NavbarInnerContainer>
         <LeftContainer>
-          <NavbarLinkContainer>
+        <Title as={Link} to="/">
+            GSP Project
+          </Title>
+        </LeftContainer>
+        <RightContainer>
+        <NavbarLinkContainer>
             <NavbarLink to="/"> Home</NavbarLink>
             <NavbarLink to="/posts"> Posts</NavbarLink>
             <NavbarLink to="/users"> Users</NavbarLink>
@@ -33,9 +39,6 @@ function Navbar() {
               {extendNavbar ? <>&#10005;</> : <> &#8801;</>}
             </OpenLinksButton>
           </NavbarLinkContainer>
-        </LeftContainer>
-        <RightContainer>
-          <Title>GSP Project</Title>
         </RightContainer>
       </NavbarInnerContainer>
       {extendNavbar && (
