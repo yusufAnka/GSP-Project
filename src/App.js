@@ -6,6 +6,7 @@ import Introduction from './components/LandingPage/Introduction';
 import Users from './components/Users/User'; 
 import Comments from './components/Comments/Comment';
 import Posts from './components/Posts/Post';
+import Photos from './components/Photos/Photos';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/posts" element={<Posts />} />
         <Route path="/users" element={<Users />} />
         <Route path="/comments" element={<Comments />} /> 
+        <Route path="/photos" element={<Photos />} /> 
       </Routes>
     </Router>
   );

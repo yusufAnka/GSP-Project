@@ -1,4 +1,3 @@
-// src/components/Table.js
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
@@ -78,6 +77,7 @@ const Table = ({ headings, data, itemsPerPage }) => {
           ))}
         </tbody>
       </StyledTable>
+      {/* pagination */}
       <PaginationContainer>
         <PaginationButton onClick={handlePrevPage} disabled={currentPage === 1}>
           Previous
@@ -87,6 +87,7 @@ const Table = ({ headings, data, itemsPerPage }) => {
           Next
         </PaginationButton>
       </PaginationContainer>
+      {/* pagination */}
     </div>
   );
 };

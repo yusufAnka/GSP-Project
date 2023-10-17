@@ -1,4 +1,3 @@
-// src/components/Users/Users.js
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Table from '../Table';

@@ -23,6 +23,7 @@ function Navbar() {
             <NavbarLink to="/"> Home</NavbarLink>
             <NavbarLink to="/posts"> Posts</NavbarLink>
             <NavbarLink to="/users"> Users</NavbarLink>
+            <NavbarLink to="/photos"> Photos</NavbarLink>
             <NavbarLink to="/comments"> Comments</NavbarLink>
             <OpenLinksButton
               onClick={() => {
@@ -42,6 +43,7 @@ function Navbar() {
           <NavbarLinkExtended to="/"> Home</NavbarLinkExtended>
           <NavbarLinkExtended to="/posts"> Posts</NavbarLinkExtended>
           <NavbarLinkExtended to="/users"> Users</NavbarLinkExtended>
+          <NavbarLinkExtended to="/photos"> Photos</NavbarLinkExtended>
           <NavbarLinkExtended to="/comments"> Comments</NavbarLinkExtended>
         </NavbarExtendedContainer>
       )}

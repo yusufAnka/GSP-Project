@@ -1,4 +1,3 @@
-// utils/api.js
 import axios from 'axios';
 
 const BASE_URL = 'https://jsonplaceholder.typicode.com';
@@ -15,5 +14,10 @@ export const fetchUsers = async () => {
 
 export const fetchComments = async () => {
   const response = await axios.get(`${BASE_URL}/comments`);
+  return response.data;
+};
+
+export const fetchPhotos = async () => {
+  const response = await axios.get(`${BASE_URL}/photos`);
   return response.data;
 };
