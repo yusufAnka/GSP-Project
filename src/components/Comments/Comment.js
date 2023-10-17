@@ -7,7 +7,7 @@ import { COMMENTS } from "../../utils/constants";
 
 const CommentsContainer = styled.div`
   padding: 2rem;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 `;
 
 const ErrorMessage = styled.p`

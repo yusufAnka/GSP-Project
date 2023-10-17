@@ -6,6 +6,7 @@ import { USERS } from "../../utils/constants";
 
 const UsersContainer = styled.div`
   padding: 2rem;
+  margin-bottom: 2rem;
 `;
 
 const ErrorMessage = styled.p`

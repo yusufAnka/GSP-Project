@@ -6,7 +6,7 @@ import useFetch from '../../hooks/useFetch';
 
 const DataContainer = styled.div`
   padding: 2rem;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 `;
 
 const ErrorMessage = styled.p`

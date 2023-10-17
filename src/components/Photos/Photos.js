@@ -5,7 +5,7 @@ import { fetchPhotos } from '../../utils/api';
 
 const PhotosContainer = styled.div`
   padding: 2rem;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 `;
 
 const PhotosGrid = styled.div`
