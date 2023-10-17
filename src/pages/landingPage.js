@@ -70,7 +70,7 @@ const LearnMoreButton = styled(Link)`
 const LandingPage = () => {
   return (
     <IntroContainer>
-      <Title>Interview Project: Building a ReactJS Application with API Integration</Title>
+      <Title>ReactJS Application with API Integration</Title>
       <ContentContainer>
 
         <Block backgroundColor="#fff">
