@@ -17,7 +17,7 @@ const ErrorMessage = styled.p`
   border-radius: 5px;
   padding: 1rem;
   text-align: center;
-  font-family: 'Arial', sans-serif; /* Change the font family as needed */
+  font-family: 'Arial', sans-serif; 
 `;
 
 const Comments = () => {

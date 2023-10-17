@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const StyledTable = styled.table`
   width: 100%; /* Set a fixed width or adjust as needed */
@@ -17,11 +17,15 @@ const TableHead = styled.th`
 
 const TableData = styled.td`
   padding: 0.5rem;
-  text-align: left /* Center align the text */
+  text-align: left; /* Center align the text */
 `;
 
 const TableRow = styled.tr`
-  background-color: ${(props) => (props.$isodd ? '#f2f2f2' : '#e6e6e6')};
+  ${(props) =>
+    props.$isodd &&
+    css`
+      background-color: #f2f2f2;
+    `}
 `;
 
 const PaginationContainer = styled.div`

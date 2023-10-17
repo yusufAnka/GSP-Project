@@ -9,6 +9,7 @@ const FooterContainer = styled.footer`
   position: fixed;
   bottom: 0;
   width: 100%;
+  max-height: 2rem;
 
   p {
     max-width: 96vw
