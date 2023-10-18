@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 
 // Keyframe animation for fadeIn
@@ -28,7 +27,7 @@ const ContentContainer = styled.div`
 `;
 
 const Block = styled.div`
-  background-color: ${(props) => props.backgroundColor || '#fff'};
+  background-color:"#d6d6c2";
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -49,7 +48,7 @@ const Description = styled.p`
   margin-bottom: 1.5rem;
 `;
 
-const LearnMoreButton = styled(Link)`
+const LearnMoreButton = styled.a`
   background-color: #333;
   color: white;
   padding: 0.8rem 2rem;
@@ -73,7 +72,7 @@ const LandingPage = () => {
       <Title>ReactJS Application with API Integration</Title>
       <ContentContainer>
 
-        <Block backgroundColor="#fff">
+        <Block>
           <Description>
             This project is a ReactJS application that connects to a RESTful API (JSONPlaceholder) to display data from an external service. It serves as an interview project to assess skills in developing front-end applications, integrating external services, and working with RESTful APIs.
           </Description>
@@ -99,7 +98,7 @@ const LandingPage = () => {
           </Description>
         </Block>
       </ContentContainer>
-      <LearnMoreButton to="/">Learn More</LearnMoreButton>
+      <LearnMoreButton href="https://github.com/yusufAnka/gsp-project">Learn More</LearnMoreButton>
     </IntroContainer>
   );
 };

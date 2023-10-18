@@ -1,6 +1,6 @@
 // for table component
 import { render } from '@testing-library/react';
-import Table from '../src/components/Table';
+import Table from '../components/Table';
 
 const headings = ['ID', 'Name', 'Email'];
 const data = [

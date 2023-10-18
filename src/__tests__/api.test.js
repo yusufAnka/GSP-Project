@@ -1,6 +1,6 @@
 // testing file for api.js file:
 import axios from 'axios';
-import { fetchPosts, fetchUsers, fetchComments, fetchPhotos } from '../src/utils/api';
+import { fetchPosts, fetchUsers, fetchComments, fetchPhotos } from '../utils/api';
 
 jest.mock('axios'); // Mocking axios module
 
